@@ -8,6 +8,7 @@
         body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; }
         .container { max-width: 800px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         h1 { text-align: center; font-size: 24px; }
+        p { text-align: center; font-size: 16px; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         table, th, td { border: 1px solid #ddd; }
         th, td { padding: 10px; text-align: center; }
@@ -15,12 +16,15 @@
         .question { text-align: left; }
         button { margin-top: 20px; padding: 10px 20px; background-color: #4caf50; color: white; border: none; border-radius: 5px; cursor: pointer; }
         button:hover { background-color: #45a049; }
+        #result-interpretation h3 { font-size: 20px; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>Pittsburgh Sleep Quality Index (PSQI)</h1>
+    <p>The Pittsburgh Sleep Quality Index (PSQI) is a self-report questionnaire that assesses sleep quality over a 1-month time interval. It helps in understanding sleep disturbances and the overall quality of your sleep. Answer the following questions based on your sleep habits in the past month.</p>
+
     <form id="psqiForm">
         <table>
             <thead>
@@ -112,6 +116,17 @@
                 </tr>
             </tbody>
         </table>
+
+        <div id="result-interpretation" style="margin-top: 20px; padding: 10px; background-color: #e0f7fa; border-radius: 5px;">
+            <h3>How to Interpret Your Score:</h3>
+            <p>The PSQI score ranges from 0 to 21, where lower scores indicate better sleep quality.</p>
+            <ul>
+                <li><strong>0-5:</strong> Good sleep quality.</li>
+                <li><strong>6-10:</strong> Moderate sleep difficulties.</li>
+                <li><strong>11-21:</strong> Severe sleep difficulties. It may be advisable to consult a healthcare provider.</li>
+            </ul>
+        </div>
+
         <button type="button" onclick="calculateScore()">Submit</button>
     </form>
 </div>
